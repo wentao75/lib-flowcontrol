@@ -2,18 +2,14 @@ const pino = require("pino");
 const numeral = require("numeral");
 
 const logger = pino({
-    // level: ,
+    level: process.env.LOGGER || "info",
     prettyPrint: {
         levelFirst: true,
-        translateTime: "SYS:standard",
+        translateTime: "SYS:yyyy-yy-dd HH:MM:ss.l",
         crlf: true,
     },
     prettifier: require("pino-pretty"),
 });
-
-if (process.env.LOGGER) {
-    logger.level = process.env.LOGGER;
-}
 
 class FlowControl {
     constructor(maxFlow = 0, name = "默认流控") {
