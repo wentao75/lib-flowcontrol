@@ -63,7 +63,7 @@ class FlowControl {
             let now = Date.now();
 
             // 简单的采用请求间隔时间来控制流速
-            if (now - this._lastExecuteTime < this._minInterval) {
+            if (now - this._lastExecuteTime <= this._minInterval) {
                 // 如果当前时间到上一次间隔时间小于流控间隔时间，则返回false，这样用于确保每次执行都是均匀发出的
                 return false;
             }
