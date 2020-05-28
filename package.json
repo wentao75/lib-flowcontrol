@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "提供基于Promise的异步处理池和流控",
     "main": "flowcontrol.js",
-    "module": "flowcontrol.esm.js",
     "author": "Wen Tao <mail.wentao@gmail.com>",
     "license": "MIT",
     "scripts": {

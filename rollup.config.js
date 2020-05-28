@@ -11,6 +11,7 @@ import pkg from "./package.json";
 
 export default {
     input: "src/flow-control.js",
+    // external: ["@babel/runtime"],
     plugins: [
         resolve(),
         babel({
@@ -29,10 +30,10 @@ export default {
             name: pkg.name,
             sourcemap: true,
         },
-        {
-            file: "flowcontrol.esm.js",
-            format: "es",
-        },
+        // {
+        //     file: "flowcontrol.esm.js",
+        //     format: "es",
+        // },
         // {
         //     file: "dist/flowcontrol.cjs.js",
         //     format: "cjs",
