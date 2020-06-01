@@ -11,7 +11,7 @@ import pkg from "./package.json";
 
 export default {
     input: "src/flow-control.js",
-    // external: ["@babel/runtime"],
+    external: ["pino", "numeral"],
     plugins: [
         resolve(),
         babel({
